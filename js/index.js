@@ -139,8 +139,8 @@
 
 
 function diskr(a, b, c){
-    const result = b*b - 4*a*c;
-    return result;
+    const diskriminant = b*b - 4*a*c;
+    return diskriminant;
 }
 
 const a = parseFloat(prompt('введідть коефіцієнт (a) для рівняння ax*x + bx + c = 0'));
@@ -155,24 +155,24 @@ if (solving < 0) {
 }
 
 
-function square(a, b, sqrSolving) {
-    const formul1 = (-b + sqrtSolving) / 2 * a;
+function square1(a, b, sqrSolving) {
+    const formul1 = (-b + sqrtSolving) / (2 * a);
     return formul1;
 }
 
-const resultFormul1 = square(a, b, sqrtSolving);
+const resultFormul1 = square1(a, b, sqrtSolving);
 document.write(('Дискримінант = ') + solving);
 document.write('<br>');
 document.write(('x1,x2 = ') + (-b) + (' ± ') + (sqrtSolving) + ( '/' ) + ( 2*a ));
 document.write('<br>');
 document.write('х1 = ' + (resultFormul1) ) ;
 
-function square1(a, b, sqrSolving) {
-    const formul2 = (-b - sqrtSolving) / 2 * a;
+function square2(a, b, sqrSolving) {
+    const formul2 = (-b - sqrtSolving) / (2 * a);
     return formul2;
 }
 
-const resultFormul2 = square1(a, b, sqrtSolving);
+const resultFormul2 = square2(a, b, sqrtSolving);
 document.write('<br>')
 document.write('х2 = ' + (resultFormul2)) ;
 
